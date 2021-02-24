@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js",
-    "export": "next export",
     "deploy": "yarn run build && yarn run export"
   },
   "dependencies": {
