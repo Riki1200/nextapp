@@ -24,7 +24,13 @@ export const MathComponent  = ( ) => {
        const asyncion = async () =>{
            try {
                 
-                let f = await fetch(`http://numbersapi.com/${refNumber.current.value}/${refType.current.value}?json`, {method: "get"})
+                let f = await fetch(`http://numbersapi.com/${refNumber.current.value}/${refType.current.value}?json`, {
+                    method: "get",
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                
+                })
                 let r = await f.json();
 
                 UseCTX.setProvider({
@@ -48,7 +54,12 @@ export const MathComponent  = ( ) => {
 
             try {
 
-                let f = await fetch(`http://numbersapi.com/${search}/${type}?json`, {method: "get"})
+                let f = await fetch(`http://numbersapi.com/${search}/${type}?json`, {
+                    method: "get",
+            
+                    headers: {
+                        'Content-type': 'application/json'
+                    }})
                 let r = await f.json();
               
 
