@@ -8,7 +8,8 @@ const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
   const server = express()
-
+    server.use(express.json())
+    server.use(express.urlencoded({extended: true}))
   server.get('/', (req, res) => {
     return app.render(req, res, '/', req.query)
   })
