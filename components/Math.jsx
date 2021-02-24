@@ -99,17 +99,17 @@ export const MathComponent  = ( ) => {
         onChange={HandleChange}>
             <div className='form_fields'>
                 <label htmlFor='search'>Search: </label>
-                <input type="number" defaultValue={search} onChange={ev => setSearch(parseInt(ev.target.value))} ref={refNumber}  name='search' id='search' ></input>
+                <input type="number" class="form-control" defaultValue={search} onChange={ev => setSearch(parseInt(ev.target.value))} ref={refNumber}  name='search' id='search' ></input>
             </div>
             <div>
-                <select name="type" ref={refType} onChange={ev => setStype((ev.target.value).toString())} id="type">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="type" ref={refType} onChange={ev => setStype((ev.target.value).toString())} id="type">
                      <option value='trivia'>Trivia</option>
                      <option value='math'>Math</option>
                      <option value='date'>Date</option>
                      <option value='year'>Year</option>           
                 </select>
             </div>
-            <button className='submit' type='submit'>Search</button>
+            <button className='submit btn btn-success' type='submit'>Search</button>
         </form>
     
     
