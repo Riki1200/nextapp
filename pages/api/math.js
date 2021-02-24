@@ -28,9 +28,9 @@ function middleWare(req,res,fn) {
 
     await middleWare(req,res,cors);
 
-    const api = await fetch(`http://numbersapi.com/${number}/${type}?json`)
+    const api = await fetch(`http://numbersapi.com/${number}/${type}?json`, {method: "GET"})
     const json = await api.json();
-
+    console.log(json)
     res.json(json)
 }
 

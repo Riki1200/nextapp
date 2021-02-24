@@ -24,7 +24,7 @@ export const MathComponent  = ( ) => {
        const asyncion = async () =>{
            try {
                 
-                let f = await fetch(window.location.origin + `/api/math?number=${refNumber.current.value}&type=${refType.current.value}`, {
+                let f = await fetch(`/api/math?number=${refNumber.current.value}&type=${refType.current.value}`, {
                     method: "get",
                     headers: {
                         'Content-type': 'application/json'
@@ -54,7 +54,7 @@ export const MathComponent  = ( ) => {
 
             try {
 
-                let f = await fetch(window.location.origin + `'/api/math?number=${search}&type=${type}`, {
+                let f = await fetch(`/api/math?number=${search}&type=${type}`, {
                     method: "get",
             
                     headers: {
