@@ -21,7 +21,7 @@ function middleWare(req,res,fn) {
     })
 }
 
- export default async (req,res) => {
+ export default async function handler(req,res){
     const {
     query: { number,type },
   } = req
