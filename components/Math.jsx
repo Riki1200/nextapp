@@ -24,7 +24,7 @@ export const MathComponent  = ( ) => {
        const asyncion = async () =>{
            try {
                 
-                let f = await fetch(`http://numbersapi.com/${refNumber.current.value}/${refType.current.value}?json`, {
+                let f = await fetch(window.location.origin + `/api/math?number=${refNumber.current.value}&type=${refType.current.value}`, {
                     method: "get",
                     headers: {
                         'Content-type': 'application/json'
@@ -54,7 +54,7 @@ export const MathComponent  = ( ) => {
 
             try {
 
-                let f = await fetch(`http://numbersapi.com/${search}/${type}?json`, {
+                let f = await fetch(window.location.origin + `'/api/math?number=${search}&type=${type}`, {
                     method: "get",
             
                     headers: {
@@ -82,6 +82,7 @@ export const MathComponent  = ( ) => {
 
     React.useEffect(() => {
          
+      
     
 
     },[search,type,setSearch,setStype ])
