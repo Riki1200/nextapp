@@ -35,7 +35,7 @@ export const Navbar = () => {
 
     return <> 
         <NavbarContent className="nav_bar">
-            <Title>NextJS ReactJS</Title>
+            <h1 style={{color:"#fff"}}>NextJS ReactJS</h1>
             <NavListContainer 
                 className='nav_list'>
                 {

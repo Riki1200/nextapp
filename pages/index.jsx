@@ -5,9 +5,10 @@ import {Navbar} from '../components/navbar.jsx';
 import { MathCard, MathContent } from '../components/style-components/stylecomponents';
 import { Footer } from '../components/Footer';
 
-export const Context = React.createContext({setProvider: () => {}})
+export const Context = React.createContext({setProvider: () => {},setMsg: () => {}})
 
 export default function Home({math}) {
+  const [msg,setMSG] = React.useState({msg:""})
   const [provider,setProvider] = React.useState(() => ({
       type: "",
       name: "",
@@ -21,7 +22,7 @@ export default function Home({math}) {
       <title>Home - Math Curiosity</title>
     </Head>
     <Navbar/>
-   <Context.Provider value={{setProvider}}>
+   <Context.Provider value={{setProvider,setMSG}}>
     <main className='home' style={{padding: "20px 30px"}}>
       <MathComponent/>
       <MathContent>
@@ -30,11 +31,14 @@ export default function Home({math}) {
            ? provider.ctx.map((value,index) => (
           
               <MathCard key={index}>
-                  {JSON.stringify(value)} 
-                  
+      
+                  <h2>Number of the knowledge: {value.number}</h2>
+                  <div className='text_content'>
+                     <h3><var>History out of the  number:</var>  {value.text}</h3>
+                    </div>
               </MathCard>
   
-           )) : null}
+           )) : msg.msg}
      
       </MathContent>
      

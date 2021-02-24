@@ -101,6 +101,7 @@ export const PostCard = styled('article')`
 
 export const MathContent = styled('section')`
     width:100%;
+    height:40ch;
     margin-top: 30px;
     display:flex;
     justify-content:center;

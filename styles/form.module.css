@@ -1,0 +1,31 @@
+.form_content{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 150px;
+     gap: 15px;
+}
+
+.form_content label   {
+    font-size: 25px;
+}
+
+.form_content input::-webkit-outer-spin-button,
+ .form_content  input::-webkit-inner-spin-button{
+   appearance: none;
+}
+
+
+.form_content input[type='number'] {
+    padding: 10px 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    appearance: text;
+    -webkit-appearance: textfield;
+}
+.form_content button {
+    padding: 10px 30px;
+}

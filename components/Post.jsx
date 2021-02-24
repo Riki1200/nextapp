@@ -9,13 +9,13 @@ import { PostCard, PostContainer } from './style-components/stylecomponents';
 export function PostComponent({post}){
     return <>
         <PostContainer>
-            {console.log(post)}
+
             {post[0].length > 0 ? post[0].map((value,index) => (
                  <PostCard key={value.id + index}>
                         <h2>{value.title}</h2>
                         <p>{value.body}</p>
                 </PostCard>
-            )) : null}
+            )) : <div>Not match resukts! Please, restart network</div>}
              
         </PostContainer>
     
