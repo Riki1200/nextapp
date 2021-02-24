@@ -4,7 +4,9 @@ import { render } from 'sass';
 export default class CustomDocument extends Document {
     render(){
         return <Html>
-        <Head></Head>
+        <Head>
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/> 
+        </Head>
         <body>
             <Main/>
         </body>
