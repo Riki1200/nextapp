@@ -31,6 +31,6 @@ function middleWare(req,res,fn) {
     const api = await fetch(`http://numbersapi.com/${number}/${type}?json`, {method: "GET"})
     const json = await api.json();
     console.log(json)
-    res.json(json)
+    res.status(200).json(json)
 }
 
